@@ -22,8 +22,13 @@
 
 | Column                              | Type       | Options                        |
 |-------------------------------------|------------|--------------------------------|
-| name                                | text       | null: false                    |
+| name                                | string     | null: false                    |
 | explanation                         | text       | null: false                    |
+| category                            | string     | null: false                    |
+| status                              | string     | null: false                    |
+| delivery_charge                     | string     | null: false                    |
+| prefectures                         | text       | null: false                    |
+| delivery_time                       | text       | null: false                    |
 | price                               | integer    | null: false                    |
 | user                                | references | null: false, foreign_key: true |
 
@@ -45,16 +50,16 @@
 - belongs_to :item
 - has_one :shiipping_addressed
 
-## shiipping_addressed
+## shiipping_addresseds
 
 | Column          | Type       | Options     |
 |-----------------|------------|-------------|
-| post_code       | text       | null: false |
+| post_code       | string     | null: false |
 | prefectures     | text       | null: false |
-| manicipalities  | text       | null: false |
-| house_number    | text       | null: false |
-| building_name   | text       | null: false |
-| phone_number    | integer    | null: false |
+| municipalities  | string     | null: false |
+| house_number    | string     | null: false |
+| building_name   | string     |             |
+| phone_number    | string     | null: false |
 `
 ### Association
 
