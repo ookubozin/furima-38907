@@ -24,11 +24,11 @@
 |-------------------------------------|------------|--------------------------------|
 | name                                | string     | null: false                    |
 | explanation                         | text       | null: false                    |
-| category                            | string     | null: false                    |
-| status                              | string     | null: false                    |
-| delivery_charge                     | string     | null: false                    |
-| prefectures                         | text       | null: false                    |
-| delivery_time                       | text       | null: false                    |
+| category_id                         | string     | null: false                    |
+| status_id                           | string     | null: false                    |
+| delivery_charge_id                  | string     | null: false                    |
+| prefecture_id                       | text       | null: false                    |
+| delivery_time_id                    | text       | null: false                    |
 | price                               | integer    | null: false                    |
 | user                                | references | null: false, foreign_key: true |
 
@@ -55,7 +55,7 @@
 | Column          | Type       | Options     |
 |-----------------|------------|-------------|
 | post_code       | string     | null: false |
-| prefectures     | text       | null: false |
+| prefecture_id   | text       | null: false |
 | municipalities  | string     | null: false |
 | house_number    | string     | null: false |
 | building_name   | string     |             |
