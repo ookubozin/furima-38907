@@ -24,11 +24,11 @@
 |-------------------------------------|------------|--------------------------------|
 | name                                | string     | null: false                    |
 | explanation                         | text       | null: false                    |
-| category_id                         | string     | null: false                    |
-| status_id                           | string     | null: false                    |
-| delivery_charge_id                  | string     | null: false                    |
-| prefecture_id                       | text       | null: false                    |
-| delivery_time_id                    | text       | null: false                    |
+| category_id                         | integer    | null: false                    |
+| status_id                           | integer    | null: false                    |
+| delivery_charge_id                  | integer    | null: false                    |
+| prefecture_id                       | integer    | null: false                    |
+| delivery_time_id                    | integer    | null: false                    |
 | price                               | integer    | null: false                    |
 | user                                | references | null: false, foreign_key: true |
 
@@ -52,15 +52,17 @@
 
 ## shiipping_addresseds
 
-| Column          | Type       | Options     |
-|-----------------|------------|-------------|
-| post_code       | string     | null: false |
-| prefecture_id   | text       | null: false |
-| municipalities  | string     | null: false |
-| house_number    | string     | null: false |
-| building_name   | string     |             |
-| phone_number    | string     | null: false |
-`
+| Column          | Type       | Options                        |
+|-----------------|------------|--------------------------------|
+| post_code       | string     | null: false                    |
+| prefecture_id   | integer    | null: false                    |
+| municipalities  | string     | null: false                    |
+| house_number    | string     | null: false                    |
+| building_name   | string     |                                |
+| phone_number    | string     | null: false                    |
+| purchase_record | references | null: false, foreign_key: true |
+
+
 ### Association
 
 - belongs_to :purchase_record
