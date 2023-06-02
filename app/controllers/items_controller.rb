@@ -7,7 +7,7 @@ class ItemsController < ApplicationController
   end
 
   def create
-    item.create(item_params)
+
   end
 
   private
@@ -15,7 +15,7 @@ class ItemsController < ApplicationController
     params.require(:item).permit(:name, :explanation, :price, :user)
   end
 
-  def message_params
+  def item_image_params
     params.require(:item).permit(:content, :image).merge(user_id: current_user.id)
   end
 end
