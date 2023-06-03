@@ -2,11 +2,11 @@ FactoryBot.define do
   factory :item do
     name               { 'hoge' }
     explanation        { 'hoge' }
-    category_id        {2}
-    status_id          {2}
-    delivery_charge_id {2}
-    prefecture_id      {2}
-    delivery_time_id   {2}
+    category_id        { 2 }
+    status_id          { 2 }
+    delivery_charge_id { 2 }
+    prefecture_id      { 2 }
+    delivery_time_id   { 2 }
     price              { '300' }
     association :user
     after(:build) do |item|
