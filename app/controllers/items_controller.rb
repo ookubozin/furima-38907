@@ -1,9 +1,9 @@
 class ItemsController < ApplicationController
   before_action :authenticate_user!, only: :new
 
-  def index
-    @item = Item.all
-  end
+  # def index
+  #   @item = Item.all
+  # end
 
   def new
     @item = Item.new
@@ -21,7 +21,7 @@ class ItemsController < ApplicationController
   private
 
   def item_params
-    params.require(:item).permit(:name, :explanation, :price, :user, :image, :category_id, :status_id, :delivery_charge_id,
+    params.require(:item).permit(:name, :explanation, :price, :image, :category_id, :status_id, :delivery_charge_id,
                                  :prefecture_id, :delivery_time_id).merge(user_id: current_user.id)
   end
 end
