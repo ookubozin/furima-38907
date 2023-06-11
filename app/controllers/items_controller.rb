@@ -25,11 +25,7 @@ class ItemsController < ApplicationController
   end
 
   def edit
-    if user_signed_in?
-      if current_user.id == @item.user_id
-      else
-        redirect_to root_path
-      end
+    if current_user.id == @item.user_id
     else
       redirect_to root_path
     end
