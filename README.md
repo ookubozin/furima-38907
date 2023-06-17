@@ -35,7 +35,7 @@
 ### Association
 
 - belongs_to :user
-- has_one :orders
+- has_one :order
 
 ## orders table
 
@@ -65,4 +65,4 @@
 
 ### Association
 
-- belongs_to :orders
+- belongs_to :order
