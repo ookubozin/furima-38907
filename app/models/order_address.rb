@@ -6,8 +6,7 @@ class OrderAddress
     validates :post_code, format: {with: /\A[0-9]{3}-[0-9]{4}\z/, message: "is invalid. Include hyphen(-)"}
     validates :municipalities
     validates :house_number
-    validates :phone_number 
-    validates :order_id
+    validates :phone_number, format: {with: /\A\d{10,11}\z/, message: "は10桁以上11桁以内の半角数値を入力してください" }
     validates :user_id
     validates :item_id
   end
